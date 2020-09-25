@@ -9,6 +9,15 @@ body {
   font-weight: 400;
   margin: 0;
 }
+a {
+  color: #5C5C5C;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
 
 .button {
   color: #FFFFFF;
@@ -27,8 +36,11 @@ body {
   background-color:#E47131;
 }
 
-.tag {
+.button--green {
   background-color: #6DAB62;
+}
+
+.tag {
   padding: 3px 6px;
   border-radius: 10px;
   font-size: 8px;
@@ -82,7 +94,6 @@ body {
 }
 
 .header__cart-text {
-  color: #5C5C5C;
   font-size: 13px;
   width: 100px;  
 }
@@ -113,4 +124,17 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.cart__page {
+  margin: 20px auto;
+  width: 526px;
+}
+
+.cart__page-empty {
+  margin-top: 50px;
+}
+
+.cart__page-box button { 
+  margin-left:20px;
 }

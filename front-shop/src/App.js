@@ -7,6 +7,8 @@ import {
 
 import Header from './components/Header.js';
 import ProductList from './components/ProductList';
+import Cart from './components/Cart';
+
 import products from './products.json';
 
 import './App.css';
@@ -27,6 +29,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <ProductList products={products} cart={cart} handleCart={handleCart}/>
+          </Route>
+          <Route path="/cart">
+            <Cart cart={cart} handleCart={handleCart} />
           </Route>
         </Switch>
       </div>

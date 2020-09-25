@@ -1,8 +1,10 @@
 import React from "react";
 
 function ProductCard({product, cart, handleCart}) {
+    const price = parseFloat(product.price).toFixed(2);
+
     return (
-     <div className="card" key={product.id}>
+    <div className="card">
         <div>
             <img 
                 src={product.images[0].small_url}
@@ -12,13 +14,13 @@ function ProductCard({product, cart, handleCart}) {
         <div className="card__main">
             <div className="card__main-heading">
                 <h2 className="strong inline">{product.name}</h2>
-                <p class="small inline">{product.unit_to_display}</p>
+                <p className="small inline">{product.unit_to_display}</p>
             </div>
             <p>{product.description}</p>
-            <p><span className="strong">Price</span> € {product.price}</p>
+            <p><span className="strong">Price</span> € {price}</p>
         </div>
         <div className="card__buttons">
-            <div className="tag">{product.taxon.name}</div>
+            <div className="button--green tag">{product.taxon.name}</div>
             {cart.includes(product)? <button className="button button--red" onClick={(e)=>{handleCart(e, product)}}>Remove</button> : 
             <button className="button button--orange" onClick={(e)=>{handleCart(e, product)}}>Add to cart</button> }        </div>
     </div>
