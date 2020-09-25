@@ -1,7 +1,7 @@
 import React from "react";
 
-function ProductCard({product}) {
-     return (
+function ProductCard({product, cart, handleCart}) {
+    return (
      <div className="card" key={product.id}>
         <div>
             <img 
@@ -19,8 +19,8 @@ function ProductCard({product}) {
         </div>
         <div className="card__buttons">
             <div className="tag">{product.taxon.name}</div>
-            <button className="button button--orange">Add to cart</button>
-        </div>
+            {cart.includes(product)? <button className="button button--red" onClick={(e)=>{handleCart(e, product)}}>Remove</button> : 
+            <button className="button button--orange" onClick={(e)=>{handleCart(e, product)}}>Add to cart</button> }        </div>
     </div>
       );        
 }

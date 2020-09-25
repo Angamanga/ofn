@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,14 +12,21 @@ import products from './products.json';
 import './App.css';
 
 function App() {
+  const [cart, updateCart] = useState([]);
+  const handleCart = (e, product) => {
+    e.preventDefault();
+    let newState = cart.includes(product) ? cart.filter(p => p.id !== product.id) : [...cart, product];
+    updateCart(newState);
+  }
+
   return (
     <div className="App">
       <Router>
       <div>
-      <Header cart={[]} />
+      <Header cart={cart} />
         <Switch>
           <Route exact path="/">
-            <ProductList products={products}/>
+            <ProductList products={products} cart={cart} handleCart={handleCart}/>
           </Route>
         </Switch>
       </div>

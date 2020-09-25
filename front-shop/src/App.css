@@ -23,6 +23,10 @@ body {
   background-color: #E4B233;
 }
 
+.button--red {
+  background-color:#E47131;
+}
+
 .tag {
   background-color: #6DAB62;
   padding: 3px 6px;
