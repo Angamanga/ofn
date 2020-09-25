@@ -16,10 +16,10 @@ function Cart({cart, handleCart}) {
         <main className="cart__page">
             <Link className="small" to="/"> &#60; back to Products</Link>
             <h1>My cart</h1>
-            {cart.length === 0 ? <p className="cart__page-empty">Empty cart, no fun :(</p> :
+            {cart.length === 0 ? <p className="cart__page-element">Empty cart, no fun :(</p> :
                 <div className="cart_page_listing">
                     {cart.map(cartItem =><ProductCard key={cartItem.id} product={cartItem} handleCart={handleCart} cart={cart} />)}
-                    <div className="cart__page-box">
+                    <div className="cart__page-element">
                         <h2 className="inline strong">Total:</h2><span> € {totalPrice}</span>
                         <button className="button button--green">Proceed to checkout</button>
                     </div>

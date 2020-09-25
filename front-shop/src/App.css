@@ -127,14 +127,14 @@ h1, h2 {
 }
 
 .cart__page {
-  margin: 20px auto;
+  margin: 33px auto;
   width: 526px;
 }
 
-.cart__page-empty {
+.cart__page-element {
   margin-top: 50px;
 }
 
-.cart__page-box button { 
+.cart__page-element button { 
   margin-left:20px;
 }
