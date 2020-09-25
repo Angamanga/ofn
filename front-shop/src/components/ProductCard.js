@@ -21,8 +21,8 @@ function ProductCard({product, cart, handleCart}) {
         </div>
         <div className="card__buttons">
             <div className="button--green tag">{product.taxon.name}</div>
-            {cart.includes(product)? <button className="button button--red" onClick={(e)=>{handleCart(e, product)}}>Remove</button> : 
-            <button className="button button--orange" onClick={(e)=>{handleCart(e, product)}}>Add to cart</button> }        </div>
+            {cart.includes(product)? <button className="button button__red" onClick={(e)=>{handleCart(e, product)}}>Remove</button> : 
+            <button className="button button__orange" onClick={(e)=>{handleCart(e, product)}}>Add to cart</button> }        </div>
     </div>
       );        
 }

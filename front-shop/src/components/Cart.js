@@ -21,7 +21,7 @@ function Cart({cart, handleCart}) {
                     {cart.map(cartItem =><ProductCard key={cartItem.id} product={cartItem} handleCart={handleCart} cart={cart} />)}
                     <div className="cart__page-element">
                         <h2 className="inline strong">Total:</h2><span> € {totalPrice}</span>
-                        <button className="button button--green">Proceed to checkout</button>
+                        <button className="button button__green">Proceed to checkout</button>
                     </div>
                 </div>
             }

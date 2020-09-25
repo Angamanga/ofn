@@ -28,15 +28,15 @@ h1, h2 {
   font-size: 13px;
 }
 
-.button--orange {
+.button__orange {
   background-color: #E4B233;
 }
 
-.button--red {
+.button__red {
   background-color:#E47131;
 }
 
-.button--green {
+.button__green {
   background-color: #6DAB62;
 }
 
