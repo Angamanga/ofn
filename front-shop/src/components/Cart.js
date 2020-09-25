@@ -18,7 +18,7 @@ function Cart({cart, handleCart}) {
             <h1>My cart</h1>
             {cart.length === 0 ? <p className="cart__page-element">Empty cart, no fun :(</p> :
                 <div className="cart_page_listing">
-                    {cart.map(cartItem =><ProductCard key={cartItem.id} product={cartItem} handleCart={handleCart} cart={cart} />)}
+                    {cart.map(cartItem => <ProductCard key={cartItem.id} product={cartItem} handleCart={handleCart} cart={cart} />)}
                     <div className="cart__page-element">
                         <h2 className="inline strong">Total:</h2><span> € {totalPrice}</span>
                         <button className="button button__green">Proceed to checkout</button>
