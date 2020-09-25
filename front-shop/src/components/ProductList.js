@@ -1,9 +1,12 @@
 import React from "react";
+import ProductCard from './ProductCard';
 
-function ProductList() {
-    return <main>
-        <p>ProductList</p>
-    </main>
+function ProductList({products}) {
+    return (
+        <main>
+            {products.map(product => <ProductCard key={product.id} product={product} />)}
+        </main>
+    );
 }
 
 

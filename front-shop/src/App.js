@@ -7,6 +7,7 @@ import {
 
 import Header from './components/Header.js';
 import ProductList from './components/ProductList';
+import products from './products.json';
 
 import './App.css';
 
@@ -18,7 +19,7 @@ function App() {
       <Header cart={[]} />
         <Switch>
           <Route exact path="/">
-            <ProductList />
+            <ProductList products={products}/>
           </Route>
         </Switch>
       </div>
